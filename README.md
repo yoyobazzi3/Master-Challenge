@@ -106,7 +106,7 @@ For this implementation, a route must be created.
 The endpoint retrieves all the products that match a specific status.
 
 
-### 4 Create an endpoint to filter a product by category
+### 4 Create an endpoint to filter products by category
 
 #### Description
 
@@ -116,7 +116,7 @@ For this implementation, a route must be created.
 
 #### Acceptance criteria
 
-The endpoint retrieves all the products that match a specific status.
+The endpoint retrieves all the products that match a specific category.
 
 
 ### 5 Create an endpoint to filter products by brandname
@@ -129,7 +129,7 @@ For this implementation, a route must be created.
 
 #### Acceptance criteria
 
-The endpoint retrieves all the products that match a specific status.
+The endpoint retrieves all the products that match a specific brandname.
 
 
 ### 6 Add tests for the product routes
