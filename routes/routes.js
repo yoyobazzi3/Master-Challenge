@@ -9,8 +9,8 @@ const routes = (router) => {
   router.route('/')
     .post(insertionCtrl.insertValue)
 
-  router.route('/search/name/:searchQuery')
-    .get(searchCtrl.searchByName)
+  router.route('/search/id/:searchQuery')
+    .get(searchCtrl.searchById)
 }
 
 export default routes
