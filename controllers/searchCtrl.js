@@ -9,7 +9,7 @@ export default {
    * @param  res
    */
   searchByName: (req, res) => {
-    ItemModel.find({ name: req.params.searchQuery }).then(result => {
+    ItemModel.find({ id: req.params.searchQuery }).then(result => {
       if (!result.length) {
         res.status(200).json({ message: 'No results found!' })
       } else {
