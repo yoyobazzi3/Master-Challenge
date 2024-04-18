@@ -14,6 +14,7 @@ export default {
     ItemModel.find({ name: req.body.name }).then(result => {
       if (!result.length) {
         const itemData = new ItemModel({
+          id: req.body.id,
           name: req.body.name,
           category: req.body.category,
           brandname: req.body.brandname,
