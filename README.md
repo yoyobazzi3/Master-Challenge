@@ -75,7 +75,7 @@ For this implementation, a route must be created.
 
 A product that previously exists should be removed from the database.
 
-### 2 Create an endpoint to edit a product
+### 2 Create an endpoint to edit a product by Id
 
 #### Description
 
@@ -137,3 +137,20 @@ The endpoint retrieves all the products that have more than 1 image.
 #### Description
 
 Add test for the enpoints created in the routes.js file.
+
+## Rubric Evaluation
+
+### Challenge Tasks (10 points)
+1. Create an endpoint to delete a product (2 points)
+2. Create an endpoint to edit a product by Id (2 points)
+3. Create an endpoint to get all the products (2 points)
+4. Create an endpoint to filter products by category (1.5 points)
+5. Create an endpoint to filter products with more than 1 image (1.5 points)
+6. Add tests for products’ routes (1 points)
+
+### Extra Tasks (3.5 points)
+1. Apply TDD (2 points)
+2. Apply clean code (1 point). Renaming functions and variables are valid.
+3. Add documentation for the endpoints (0.5 points)
+
+
