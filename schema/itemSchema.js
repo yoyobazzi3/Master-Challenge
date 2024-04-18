@@ -25,7 +25,7 @@ const itemSchema = {
     trim: true
   },
   images: {
-    type: String,
+    type: [String],
     unique: false,
     select: true,
     trim: true
