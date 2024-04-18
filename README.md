@@ -87,7 +87,6 @@ For this implementation, a route must be created.
 
 A product should be saved in the database and the following attributes can be changed:
 
-- Name
 - Category
 - Brandname
 - Images
