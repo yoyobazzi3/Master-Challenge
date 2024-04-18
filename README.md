@@ -51,14 +51,14 @@ First builds and then starts the server.
 #### 1. `/insert`
 ```
 Request type: POST
-Data parameters: name, category, brandName, images
+Data parameters: id, name, category, brandName, images
 ```
 
 #### 2. `/search`
-##### 2.1. By name (/search/name/:searchQuery)
+##### 2.1. By Id (/search/name/:searchQuery)
 ```
 Request type: GET
-Data parameters: name
+Data parameters: id
 ```
 
 ## Challenge Tasks
@@ -87,6 +87,7 @@ For this implementation, a route must be created.
 
 A product should be saved in the database and the following attributes can be changed:
 
+- Name
 - Category
 - Brandname
 - Images
@@ -118,17 +119,17 @@ For this implementation, a route must be created.
 The endpoint retrieves all the products that match a specific category.
 
 
-### 5 Create an endpoint to filter products by brandname
+### 5 Create an endpoint to filter products with more than 1 image
 
 #### Description
 
-It is necessary to implement an entry point to filter products by brandname:
+It is necessary to implement an entry point to filter products with more than 1 image:
 
 For this implementation, a route must be created.
 
 #### Acceptance criteria
 
-The endpoint retrieves all the products that match a specific brandname.
+The endpoint retrieves all the products that have more than 1 image.
 
 
 ### 6 Add tests for the product routes
