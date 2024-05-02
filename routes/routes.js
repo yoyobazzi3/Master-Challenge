@@ -2,7 +2,8 @@ import baseCtrl from '../controllers/baseCtrl';
 import deletionCtrl from '../controllers/deletionCtrl';
 import insertionCtrl from '../controllers/insertionCtrl';
 import searchCtrl from '../controllers/searchCtrl';
-import updateCtrl from '../controllers/updateCtrl';
+import updateCtrl from '../controllers/updateCtrl'; // Make sure to import your update controller
+
 
 const routes = (router) => {
   router.route('/basePage')
@@ -16,9 +17,8 @@ const routes = (router) => {
 
   router.route('/items/:id')
     .delete(deletionCtrl.deleteValue)
-
-    router.route('/updateItem/:id')
-    .patch(updateCtrl.updateItem);  
+    .put(updateCtrl.updateById); // Add this line to handle PUT requests for updates
+  
 
 }
 
