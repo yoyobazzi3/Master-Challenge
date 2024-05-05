@@ -6,15 +6,10 @@ const Schema = mongoose.Schema
  * @constant {Schema}
  */
 const itemSchema = {
-  id:{
-    type: String,
-    unique: true,
-    select: true,
-    trim: true
-  },
+  
   name: {
     type: String,
-    unique: true,
+    unique: false,
     select: true,
     trim: true
   },

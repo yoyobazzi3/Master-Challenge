@@ -4,16 +4,16 @@ const ItemModel = dbConnection.model('item', itemSchema);
 
 export default {
   /**
-   * Searches for data by item _id.
-   * @param  req
-   * @param  res
+   * Gets all items from the database.
+   * @param req
+   * @param res
    */
-  searchById: (req, res) => {
-    ItemModel.findById(req.params.id).then(result => { 
-      if (!result) {
-        res.status(200).json({ message: 'No results found!' });
+  getAllItems: (req, res) => {
+    ItemModel.find({}).then(items => {
+      if (!items.length) {
+        res.status(200).json({ message: 'No items found!' });
       } else {
-        res.status(200).json({ result });
+        res.status(200).json({ items });
       }
     }).catch(err => {
       res.status(500).json({ error: err });
