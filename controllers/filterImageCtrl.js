@@ -10,21 +10,18 @@ export default {
    * @param  res
    */
 
-filterByCategory:(req, res)=>{
-    ItemModel.find({category: req.params.category})
-    .then(result =>{
-        // if there are no items in the db
-        if(!result.length){
-            res.status(200).json({message: 'No items were found'})
-        }
-        else{
+filterByImage:(req,res)=>{
+    ItemModel.find({image : req.params.image}).then(result =>{
+        if(image.length>1){
             res.status(200).json({result})
         }
-    
-})
-    .catch(err=>{
+        else{
+            res.status(400).json({message:'There are no items with more than one picture'})
+        }
+    })
+    .catch(err=> {
         res.status(500).json({error: err})
     })
-
 }
+
 }

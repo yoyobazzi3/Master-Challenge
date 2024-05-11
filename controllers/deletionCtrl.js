@@ -13,7 +13,7 @@ export default {
         ItemModel.findByIdAndDelete(req.params.id)
         .then(result => {
             if(!result){
-                res.status(404).json({message: 'Item not found'})
+                res.status(200).json({message: 'Item not found'})
             }
             else{
                 res.status(200).json({message: 'Item deleted successfully'})

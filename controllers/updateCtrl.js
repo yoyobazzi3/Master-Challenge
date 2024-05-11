@@ -11,12 +11,12 @@ export default {
    */
   updateById: (req, res) => {
     ItemModel.findByIdAndUpdate(req.params.id, req.body, {new :true})
-    .then(updatedItem => {
-      if(!updatedItem){
-        res.status(404).json({message: 'Item not found'})
+    .then(result => {
+      if(!result){
+        res.status(200).json({message: 'Item not found'})
       }
       else{
-        res.status(200).json({message: 'Item updated successfully', updatedItem});
+        res.status(200).json({message: 'Item updated successfully', result});
       }
     }).catch(err=> {    
         res.status(500).json({error: err});
