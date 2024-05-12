@@ -6,10 +6,9 @@ const Schema = mongoose.Schema
  * @constant {Schema}
  */
 const itemSchema = {
-  
   name: {
     type: String,
-    unique: false,
+    unique: true,
     select: true,
     trim: true
   },

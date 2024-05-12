@@ -128,4 +128,20 @@ describe('7. Gets all the items in the DB',()=>{
     });
   })
 })
+describe('8. Filters items with more than one image', ()=>{
+  it('Expects to filter items with more than one image' , done=>{
+    const options= {
+      method: 'GET',
+      url: testURL + '/filterImage',
+      resolveWithFullResponse: true
+    }
+    rp(options).then(response =>{
+      expect(response.statusCode).to.equal(200);
+      expect(response.body).to.be.a('string');
+      done();
+    }).catch(err=>{
+      done(err);
+    })
+  })
+})
 })

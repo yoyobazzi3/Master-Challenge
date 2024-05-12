@@ -16,7 +16,6 @@ export default {
         res.status(200).json({ message: 'No items found!' });
       } 
       else {
-        // list all the items in the db
         res.status(200).json({ items });
       }
     })
