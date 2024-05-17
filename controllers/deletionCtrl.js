@@ -10,13 +10,17 @@ export default {
    * @param  res
    */
     deleteById:(req,res) =>{
+        //Gets the item by the object Id and deletes it.
         ItemModel.findByIdAndDelete(req.params.id)
+        //passes in the result parameter
         .then(result => {
+            //checks there is no result
             if(!result){
                 res.status(200).json({message: 'Item not found'})
             }
+            // if the result is found
             else{
-                res.status(200).json({message: 'Item deleted successfully'})
+                res.status(200).json({message: 'Item deleted successfully', result})
             }
         })
         .catch(err =>{

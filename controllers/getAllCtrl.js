@@ -10,13 +10,14 @@ export default {
    */
   getAllItems: (req, res) => {
     // gets all the items in the db
-    ItemModel.find({}).then(items => {
+    ItemModel.find({}).then(result => {
       // if no items were found in the db
-      if (!items.length) {
+      if (!result.length) {
         res.status(200).json({ message: 'No items found!' });
       } 
       else {
-        res.status(200).json({ items });
+        res.status(200).json({ result });
+        // console.log({result})
       }
     })
     .catch(err => {

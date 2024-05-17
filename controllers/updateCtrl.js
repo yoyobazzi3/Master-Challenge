@@ -10,6 +10,7 @@ export default {
    * @param  res
    */
   updateById: (req, res) => {
+    // gets the item using the object Id and requests the body to update it.
     ItemModel.findByIdAndUpdate(req.params.id, req.body, {new :true})
     .then(result => {
       if(!result){

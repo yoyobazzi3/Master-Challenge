@@ -19,7 +19,9 @@ const routes = (router) => {
 
   router.route('/items/:id')
     .delete(deletionCtrl.deleteById)
-    .put(updateCtrl.updateById); 
+
+    router.route('/items/:id')
+    .put(updateCtrl.updateById);
   
     router.route('/items') 
     .get(getAllCtrl.getAllItems); 

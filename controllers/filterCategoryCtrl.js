@@ -11,12 +11,15 @@ export default {
    */
 
 filterByCategory:(req, res)=>{
+    //Gets the items of a specific category
     ItemModel.find({category: req.params.category})
+    // passes in the result parameter
     .then(result =>{
         // if there are no items in the db
         if(!result.length){
             res.status(200).json({message: 'No items were found'})
         }
+        //if items are found of that category display them.
         else{
             res.status(200).json({result})
         }

@@ -25,6 +25,7 @@ const itemSchema = {
     trim: true
   },
   images: {
+    //can accept an array of strings
     type: [String],
     unique: false,
     select: true,
