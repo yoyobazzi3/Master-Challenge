@@ -13,10 +13,11 @@ export default {
     //$exists true is a boolean value to see if it exists
     ItemModel.find({"images.1": { $exists: true }})
       .then(results => {
-          if (results.length) {
-              res.status(200).json(results); 
+          if (!results.length) {
+            res.status(200).json({ message: 'No items found with more than one image' });
           } else {
-              res.status(200).json({ message: 'No items found with more than one image' });
+            res.status(200).json(results); 
+
           }
       })
       .catch((err) => {

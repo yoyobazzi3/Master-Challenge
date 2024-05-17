@@ -12,7 +12,7 @@ export default {
     // First check for an existing entry with the same name, as name is unique.
     // If results are found, throw error, else insert new values.
     ItemModel.find({ name: req.body.name }).then(result => {
-      //this checks if the database is empty
+      //if there is nothing with that name
       if (!result.length) {
         const itemData = new ItemModel({
           //removed the id param

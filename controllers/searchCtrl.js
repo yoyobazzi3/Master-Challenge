@@ -9,6 +9,8 @@ export default {
    * @param  res
    */
   searchById: (req, res) => {
+    //switched from id to object id 
+    // ItemModel.find({ id: req.params.searchQuery })
     ItemModel.findById(req.params.id).then(result => { 
       if (!result) {
         res.status(200).json({ message: 'No results found!' });

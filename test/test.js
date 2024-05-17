@@ -19,6 +19,7 @@ describe('TESTING MODULES', () => {
         method: 'GET',
         url: testURL + '/basePage',
         resolveWithFullResponse: true
+        //The promise resolves with the full response object, which includes the body, status code
       }
       rp(options).then(response => {
         expect(response.statusCode).to.equal(200)
